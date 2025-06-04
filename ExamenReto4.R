@@ -49,6 +49,7 @@ df_peliculas <- df_peliculas[,-11]
 vis_miss(df_peliculas , cluster = T)
 miss_var_summary(df_peliculas)
 df_peliculas <- kNN(df_peliculas, k = 3)
+df_peliculas <- df_peliculas[,-c(11:20)]
 miss_var_summary(df_peliculas)
 
 df_series <- df %>% filter(type == "TV Show") 
@@ -56,6 +57,7 @@ df_series <- df_series[,-10]
 vis_miss(df_series , cluster = T)
 miss_var_summary(df_series)
 df_series <- kNN(df_series, k = 3)
+df_series <- df_series[,-c(11:20)]
 miss_var_summary(df_series)
 
 
